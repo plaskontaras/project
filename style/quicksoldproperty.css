@@ -1,0 +1,21 @@
+.quicksoldmain__definition {
+	color: #f00;
+	font-weight: bold;
+}
+
+.quicksoldmain__application {
+	display: block;
+	margin: auto;
+	padding: 10px 15px;
+	border: 5px solid #008b92;
+	border-radius: 10px;
+	color: #fff; 
+	cursor: pointer;
+	font-weight: bold;
+	background-color: #333;
+}
+
+.quicksoldmain__application:hover {
+	color: #f00;
+	background-color: #008b92; 
+}

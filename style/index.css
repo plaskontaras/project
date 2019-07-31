@@ -1,0 +1,41 @@
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+	margin-top: 0.5rem;
+}
+
+.mySlides__img_width {
+	width: 100%;
+}
+
+.mySlides__text {
+	color: #fff;
+	font-size: 20px;
+	background-color: #333;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.indexmain__about-us {
+	max-width: 1000px;
+	margin: 20px auto;
+	text-align: center;
+	color: #333;
+	font-size: 14px;
+	font-family: 'Times New Roman';
+}
+
+@media only screen and (max-width: 600px) {
+
+	.mySlides__text {
+		font-size: 14px;
+	}
+
+	.indexmain__about-us {
+		font-size: 14px;
+	}
+
+}

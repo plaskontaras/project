@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta viewport="content" width="device-width scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style/general.css">
+	<link rel="stylesheet" type="text/css" href="style/aboutus.css">
+	<script src="js/general.js" defer></script>
+	<script src="js/aboutus.js" defer></script>
+	<title>Property Agency</title>
+</head>
+
+<body class="page">
+
+
+	<header class="header">
+
+		<div class="header__subheader">  
+			<div class="header__logo"><img src="images/logo.png" alt="logo" class="header__logo-img"></div>
+			<div class="header__company-name">
+				<h1><span class="header__company">Агентство недвижимости</span> "Виктория"<h1>
+			</div>
+			<p class="header__phones">
+				Телефон: (044) 228-68-68 
+				<br>
+				Киевстар:(098) 328-48-48
+			</p>
+		</div>
+
+		<nav class="header__navbar">
+			<a href="index.html" class="header__link">Главная</a>
+			<div class="header__subnav" onclick="showSubnavContent()">
+				<button class="header__subnavbtn" >Услуги <i class="fa fa-caret-down"></i></button>
+				<div class="header__subnav-content">
+					<a href="catalog.html" class="header__link">Каталог недвижимости</a>
+					<a href="quicksoldproperty.html" class="header__link">Срочный выкуп недвижимости</a>
+					<a href="appraisal.html" class="header__link">Оценка недвижимости</a>
+				</div>
+			</div>
+			<a href="aboutus.html" class="header__link">О нас</a>
+			<a href="contacts.html" class="header__link">Контакты</a>
+		</nav>
+
+	</header>
+
+
+	<main class="aboutmain main">
+
+		<h2 class="main__header">О нас</h2>
+		<p>
+			Компания <strong>«Виктория»</strong> создана в 2007 году. Сегодня коллектив АН «Виктория» — это сплочённая команда профессионалов и единомышленников, в которой преданность общему делу сочетается с индивидуальным стремлением к самореализации, служащим источником динамичного развития всей компании. С целью постоянного повышения квалификации персонала в компании разработан и внедрен план обучения, предусматривающий регулярное проведение тренингов, семинаров и аттестаций для сотрудников.
+		</p>
+		<p>
+			Мы подходим <b>индивидуально</b> к каждому нашему клиенту.
+		</p>
+		<p>
+			Наша цель: <b>профессионально и быстро</b> провести необходимую операцию с недвижимостью, минимизировав затраты времени и денег наших клиентов.
+		</p>
+		<p>
+			Оказываем полный спектр риэлторских услуг населению и организациям на рынке недвижимости Украины:
+		</p>
+
+		<ul>
+			<li>продажа (покупка)</li>
+			<li>аренда (сдача в аренду от имени владельца)</li>
+			<li>оценка объектов недвижимости</li>
+			<li>помощь в получении кредитов</li>
+			<li>консультационные услуги и др.</li>
+		</ul>
+
+		<h2 class="main__header">Наша команда</h2>
+		
+		<div class="aboutmain__slider-container">
+			<a class="aboutmain__prev" onclick="plusSlides(-1)">❮</a>
+			<div class="aboutmain__mySlides aboutmain__slide1"></div>
+			<div class="aboutmain__mySlides aboutmain__slide2"></div>
+			<div class="aboutmain__mySlides aboutmain__slide3"></div>
+			<div class="aboutmain__mySlides aboutmain__slide4"></div>
+			<div class="aboutmain__mySlides aboutmain__slide5"></div>  
+			<div class="aboutmain__mySlides aboutmain__slide6"></div>
+			<a class="aboutmain__next" onclick="plusSlides(1)">❯</a>
+		</div>	
+
+		<div class="aboutmain__caption-container">
+			<p id="aboutmain__caption"></p>
+		</div>
+
+		<div class="aboutmain__row">
+			<div class="aboutmain__column aboutmain__slide1" onclick="currentSlide(1)">
+				<p class="aboutmain__staff-information">
+				Зибров П.Н.<br>Генеральный директор, учредитель, сотрудник месяца, баритон.
+				</p>
+			</div>
+			<div class="aboutmain__column aboutmain__slide2" onclick="currentSlide(2)">
+				<p class="aboutmain__staff-information">
+				Светлана<br>Агент АН "Виктория"<br>Помогает каждому клиенту полностью решить его вопрос.<br> тел. (098) 328-48-48
+				</p>
+			</div>
+			<div class="aboutmain__column aboutmain__slide3" onclick="currentSlide(3)">
+				<p class="aboutmain__staff-information">
+				Олег<br>Агент АН "Виктория"<br>Использует эффективные стратегии по проведению сделок. Сын директора.<br> тел. (098) 223-45-67
+				</p>
+			</div>
+			<div class="aboutmain__column aboutmain__slide4" onclick="currentSlide(4)">
+				<p class="aboutmain__staff-information">
+				Андрей<br>Агент АН "Виктория"<br>Поможет провести Вашу сделку максимально быстро и выгодно<br> тел. (098) 458-43-23
+				</p>
+			</div>
+			<div class="aboutmain__column aboutmain__slide5" onclick="currentSlide(5)">
+				<p class="aboutmain__staff-information">
+				Зибров-Винник О.В.<br>Заместитель генерального директора по особо важным делам. Идеал.
+				</p>
+			</div>
+			<div class="aboutmain__column aboutmain__slide6" onclick="currentSlide(6)">
+				<p class="aboutmain__staff-information">
+				Надежда<br>Агент АН "Виктория"<br>Поможет провести Вашу сделку максимально быстро и выгодно<br> тел. (098) 248-33-21
+				</p>
+			</div>
+		</div>
+
+	</main>
+
+
+	<footer class="footer">
+
+		<p>© Made by Plaskon Taras 2019</p>
+
+	</footer>
+</body>
+</html>

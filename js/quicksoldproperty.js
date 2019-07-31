@@ -1,0 +1,3 @@
+function getQuicksoldApp() {
+	alert("hi");
+}

@@ -1,0 +1,176 @@
+html {
+	font-size: 2vw;
+}
+
+.page {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #dcdcdc;
+	margin: 0;
+	padding: 0;
+}
+
+.main {
+	padding: 20px;
+	font-size: 16px;
+}
+
+.main__header {
+	text-align: center;
+}
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
+
+.header__subheader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #008b92;
+	color: #fff;
+}
+
+.header__logo {
+	width: 20%;
+}
+
+.header__logo-img {
+	width: 3rem;
+}
+
+.header__company {
+	font-size: 0.8rem;
+}
+
+.header__company-name {
+	width: 60%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	font-size: 0.7rem;
+}
+
+.header__phones {
+	width: 20%;
+	font-size: 12px;
+}
+
+.header__navbar {
+  	overflow: hidden;
+  	background-color: #333; 
+}
+
+.header__link,
+.header__subnavbtn {
+	font-size: 14px;
+	color: #fff;
+	padding: 0.6rem 0.8rem;
+	text-align: center;
+}
+
+.header__link {
+  	float: left;
+  	text-decoration: none;
+  	z-index: 0;
+}
+
+.header__subnavbtn {  
+  	border: none;
+  	outline: none;
+  	background-color: inherit;
+  	cursor: pointer;
+}
+
+.header__subnav {
+  	float: left;
+  	overflow: hidden;
+}
+
+.header__link:hover,
+.header__subnavbtn:hover {
+  	background-color: #a52a2a;
+}
+
+.header__subnav-content {
+	display: none;
+	position: absolute;
+	left: 0;
+	background-color: #a52a2a;
+	width: 100%;
+	z-index: 10;
+}
+
+.header__subnav-content .header__link {
+  	float: left;
+  	color: white;
+}
+
+.header__subnav-content .header__link:hover {
+  	background-color: #008b92;
+}
+
+.makeDisplayBlock {
+	display: block;
+}
+
+.footer {
+	width: 100%;
+	background-color: #333;
+	font-size: 12px;
+	height: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+	
+	.main {
+		font-size: 13px;
+	}
+
+	.header__company-name,
+	.header__phones {
+		display: none;
+	}
+
+	.header__logo {
+		width: auto;
+	}
+
+	.header__logo-img {
+		width: 8rem;
+	}
+
+	.header__navbar {
+  		display: flex;
+  		flex-direction: column;
+  		align-items: center;
+	}
+
+	.header__link,
+	.header__subnavbtn {
+		color: #fff;
+		text-align: center;
+		width: 100%;
+	}
+
+	.header__subnav:hover {
+		background-color: #a52a2a;
+		cursor: pointer;
+		width: 100%;
+	}
+}
+
+/*Styles only for IE 10+*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+
+   /*IE 11 don't support 'inherit'*/
+   .header__subnavbtn {
+   		background-color: #333;
+   } 
+
+}
