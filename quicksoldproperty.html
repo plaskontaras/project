@@ -64,11 +64,48 @@
 		</ol>
 		<p>Наша компания также предоставляет <span class="quicksoldmain__definition">услуги по получению ипотечных кредитов и привлечению кредитов под залог недвижимости</span>, которая приобретается или же уже имеется.</p>
 
-		<p>Заявка будет обработана в течении 2-х часов в рабочее время</p>
-		<input type="button" value="Отправить заявку" class="quicksoldmain__application" onclick="getQuicksoldApp()">
+		<p>Заявка будет обработана нашими агентами, и мы с вами свяжемся в течении двух часов.</p>
+
+		<input type="button" value="Отправить заявку" class="quicksoldmain__application-button" onclick="showQuicksoldModal()">
 
 	</main>
 
+	<div class="quicksold__modal-window" id="modal">
+
+		<div class="quicksold__modal-close-btn" onclick="closeQuickModal()">X</div>
+
+		<form action="#.php" method="post" class="quicksold__form-container">
+
+				Ваше имя:<br>
+				<input type="text" name="name" placeholder="Enter name" required><br><br>
+				Ваш email:<br>
+				<input type="email" name="email" placeholder="Enter email" required><br><br>
+				Контактный телефон:<br>
+				<input type="phone" placeholder="Enter phone" name="phone" required><br><br>
+				Вид заявки:<br>
+				<input list="application-type" name="application-type">
+				  <datalist id="application-type">
+				    <option value="Срочная покупка">
+				    <option value="Сочная продажа">
+				  </datalist><br><br>
+				Тип недвижимости:<br>
+				<input list="property-type" name="property-type">
+				  <datalist id="property-type">
+				    <option value="Квартира">
+				    <option value="Дом">
+				    <option value="Земельный участок">
+				    <option value="Коммерческая недвижимость">
+				  </datalist><br><br>
+				Дополнительная информация:<br>
+				<textarea name="additional-info"></textarea><br><br>
+				<div class="quicksold__buttons-container">
+					<input type="submit" value="Отправить заявку" class="quicksold__modal-buttons">
+					<input type="button" value="Отмена" onclick="closeQuickModal()" class="quicksold__modal-buttons">
+				</div>
+		
+		</form>
+	
+	</div>
 
 	<footer class="footer">
 

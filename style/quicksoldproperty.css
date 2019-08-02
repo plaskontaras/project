@@ -3,11 +3,11 @@
 	font-weight: bold;
 }
 
-.quicksoldmain__application {
+.quicksoldmain__application-button {
 	display: block;
 	margin: auto;
 	padding: 10px 15px;
-	border: 5px solid #008b92;
+	border: 4px solid #008b92;
 	border-radius: 10px;
 	color: #fff; 
 	cursor: pointer;
@@ -15,7 +15,71 @@
 	background-color: #333;
 }
 
-.quicksoldmain__application:hover {
-	color: #f00;
-	background-color: #008b92; 
+.quicksoldmain__application-button:hover {
+	color: #008b92;
+	background-color: #fff; 
+}
+
+.quicksold__modal-window {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.9);
+	padding-top: 60px;
+}
+.quicksold__modal-close-btn {
+	position: absolute;
+	right: 25px;
+	top: 25px;
+	color: #fff;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.quicksold__modal-close-btn:hover {
+	cursor: pointer;
+	color: rgba(255,0,0,0.5);
+}
+
+.quicksold__modal-buttons:hover {
+	cursor: pointer;
+	color: #008b92;
+	background-color: #333; 
+}
+
+.quicksold__form-container { 
+	color: #008b92;
+	font-size: 14px;
+}
+
+.quicksold__form-container {
+	  background-color: #dcdcdc;
+	  margin: 5% auto 5% auto;
+	  border: 1px solid #888;
+	  width: 50%;
+	  padding: 10px;
+}
+
+.quicksold__modal-buttons {
+	margin-top: 20px;
+	background-color: #008b92;
+	border: none;
+	border-radius: 7px;
+	padding: 4px 8px;
+	font-weight: bold;
+}
+.quicksold__form-container textarea {
+	width: 100%;
+}
+@media only screen and (max-width: 600px) {
+
+	.quicksold__form-container input {
+		width: 100%;
+	}
+
 }

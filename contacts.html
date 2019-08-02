@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="style/contacts.css">
 	<script src="js/general.js" defer></script>
 	<script src="js/contacts.js" defer></script>
+	<script type="text/javascript" src="json/reviews.json"></script>
 	<title>Property Agency</title>
 	
 </head>
@@ -48,7 +49,67 @@
 
 
 	<main class="contactsmain main">
-		contacts here
+
+		<div class="contactsmain__address-info">
+			<div class="contactsmain__info">
+				<div><b>Адрес:</b><br> г.Киев, ул.Мечникова 3</div><br>
+				<div><b>Телефоны:</b><br> (044) 228-68-68<br> (098) 328-48-48</div><br>
+				<div><b>Время работы:</b><br>Пн-Пт: 09.00 - 21.00<br>Сб-Вс: 10.00 - 17.00</div><br>
+				<div><b>Почта:</b><br>victoria@gmail.com</div><br>
+			</div>
+
+			<div class="contactsmain__map">
+				<div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+					<div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+				    <a href="https://1map.com/map-embed?embed_id=63102">1map.com</a>
+			  	</div>
+			</div>
+		</div>
+
+		<div class="contactsmain__pre-oreder">
+			<p>Сделайте онлайн предзаказ, заполнив форму, и наши сотрудники с вами свяжутся:</p>
+			<form action="#.php" method="post" class="contactsmain__form-container">
+
+				Ваше имя:<br>
+				<input type="text" name="userName" placeholder="Введите Ф.И.О." required><br><br>
+				Ваш email:<br>
+				<input type="email" name="userEmail" placeholder="Введите почту" required><br><br>
+				Контактный телефон:<br>
+				<input type="phone" name="userPhone" placeholder="Введите телефон" required><br><br>
+				Вид заявки:<br>
+				<input list="pre-order-type" name="pre-order-type" placeholder="Выберите из списка">
+				  <datalist id="pre-order-type">
+				    <option value="Покупка">
+				    <option value="Продажа">
+				    <option value="Аренда">
+				    <option value="Сдача в аренду">
+				  </datalist><br><br>
+				Тип недвижимости:<br>
+				<input list="property-type" name="property-type" placeholder="Выберите из списка">
+				  <datalist id="property-type">
+				    <option value="Квартира">
+				    <option value="Дом">
+				    <option value="Земельный участок">
+				    <option value="Коммерческая недвижимость">
+				  </datalist><br><br>
+				Дополнительная информация:<br>
+				<textarea name="additional-info"></textarea><br><br>
+				<div class="pre-order__buttons-container">
+					<input type="submit" value="Отправить" class="pre-order__buttons">
+					<input type="reset" value="Сбросить" class="pre-order__buttons">
+				</div>
+		
+			</form>
+
+		</div>
+		<h2 class="review_header">Отзывы:</h2>
+		<div class="review__slider-container" id="review__slider-container">
+		    <a class="review__prev" onclick="plusSlides(-1)">❮</a>	
+		    <a class="review__next" onclick="plusSlides(1)">❯</a>	    
+ 		</div>
+
+  		<input type="button" value="Добавить отзыв" onclick="addReview()" class="review__button">
+
 	</main>
 
 
@@ -57,5 +118,6 @@
 		<p>© Made by Plaskon Taras 2019</p>
 
 	</footer>
+
 </body>
 </html>

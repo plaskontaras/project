@@ -1,0 +1,149 @@
+.contactsmain__address-info {
+	display: flex;
+	justify-content: space-around;
+}
+
+.contactsmain__map {
+	width: 50%;
+	overflow: hidden;
+}
+
+.contactsmain__pre-oreder {
+	width: 70%;
+	margin: 30px auto;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+}
+
+.contactsmain__form-container > input {
+	width: 50%;
+	height: 20px;
+}
+
+.contactsmain__form-container textarea {
+	width: 50%;
+	height: 50px;
+}
+.pre-order__buttons-container {
+	width: 50%;
+	margin: auto;
+}
+.pre-order__buttons {
+	margin: 10px;
+	width: 100px;
+	height: 30px;
+	background-color: #008b92;
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+}
+
+.pre-order__buttons:hover {
+	cursor: pointer;
+	background-color: #fff;
+	color: #000;
+}
+
+@media (max-width: 600px) {
+	.contactsmain__address-info {
+		flex-direction: column;
+	}
+
+	.contactsmain__map {
+		width: 100%;
+		height: 300px;
+		overflow: hidden;
+	}
+
+	.contactsmain__pre-oreder {
+		width: 100%;
+		margin: 20px 0;
+	}
+
+	.contactsmain__form-container > input {
+		width: 90%;
+		height: 15px;
+	}
+
+	.contactsmain__form-container textarea {
+		width: 90%;
+	}
+
+	.pre-order__buttons {
+		margin: 5px;
+		height: 30px;
+	}
+
+	.contactsmain__info {
+		padding-left: 10px;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 900px){
+	.contactsmain__pre-oreder {
+		width: 90%;
+	}
+}
+
+
+/*Review*/
+.review__slider-container {
+width: 70%;
+min-height: 200px;
+background-color: #333;
+color: #fff;
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.review__Slide {
+  display: none;
+}
+.review__prev,
+.review__next {
+  cursor: pointer;
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.review__Slide p:first-child {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.review_header {
+	text-align: center;
+}
+
+.review__button {
+	margin: 10px auto;
+	height: 30px;
+	background-color: #008b92;
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	display: block;
+}
+
+.review__button:hover {
+	cursor: pointer;
+	background-color: #333;
+}
+
+/*Styles only for IE 10+*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+
+    .review__slider-container,
+    .review_header,
+    .review__button {
+		display: none;
+	}
+
+
+
+}
