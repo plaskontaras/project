@@ -2,6 +2,7 @@
 <html lang="ru">
 
 <head>
+	
 	<meta charset="utf-8">
 	<meta viewport="content" width="device-width scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -9,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="style/catalog.css">
 	<script src="js/general.js" defer></script>
 	<script src="js/catalog.js" defer></script>
+	<script src="js/obj.js" defer></script>
 	<title>Property Agency</title>
 	
 </head>
@@ -50,12 +52,12 @@
 	<main class="catalogmain main">
 
 		<div class="search-and-filter-panel">
-			<div class="sort-buttons-container">
-				<input type="button" value="Показать все" class="sort-btn active" onclick="filterSelection('all')" id="showAll-btn">
-				<input type="button" value="Продажа" class="sort-btn" onclick="filterSelection('selling')">
-				<input type="button" value="Аренда" class="sort-btn" onclick="filterSelection('rent')">
-				<select onchange="sortByList()" class="selectSorting sort-btn">
-				    <option value="all">Все районы</option>
+			<div class="filter-buttons-container">
+				<input type="button" value="Показать все" class="filter-btn active" onclick="filterSelection('div-container')" id="showAll-btn">
+				<input type="button" value="Продажа" class="filter-btn" onclick="filterSelection('selling')">
+				<input type="button" value="Аренда" class="filter-btn" onclick="filterSelection('rent')">
+				<select onchange="sortByList()" class="selectSorting filter-btn">
+				    <option value="div-container">Все районы</option>
 				    <option value="golos">Голосеевский</option>
 				  	<option value="darn">Дарницкий</option>
 				  	<option value="desn">Деснянский</option>
@@ -68,26 +70,97 @@
 
 			<input type="text" class="fa" placeholder="&#xf002 Search here.." id="search-input" onkeyup="searchFunction()">
 		</div>
-		
-		<div class="catalog">
-			<div class="container">
-				<div class="all selling golos">selling golos</div>
-				<div class="all rent golos">rent golos</div>
-				<div class="all selling desn">selling desn</div>
-				<div class="all selling darn">selling darn</div>
-				<div class="all selling sviat">selling sviat</div>
-				<div class="all selling pech">selling pech</div>
-				<div class="all rent darn">rent darn</div>
-				<div class="all rent shevch">rent shevch</div>
-				<div class="all rent darn">rent darn</div>
-				<div class="all selling pech">selling pech</div>
-				<div class="all rent shevch">rent shevch</div>
-				<div class="all rent solom">rent solom</div>
-				<div class="all selling solom">selling solom</div>
-			</div>
+
+		<div class="sort-panel">
+			Отсортировать за ценой: 
+			<select id="sortSelect" onchange="sortByPrice()">
+				<option value="noSort">По умолчанию</option>
+				<option value="sortIncrease">За возрастанием цены</option>
+				<option value="sortDecrease">За спаданием цены</option>
+			</select>
 		</div>
-		<div class="pagination">
+
+		<div class="container">
+
+		</div>
+
+		<input type="button" value="Добавить недвижимость" class="add-property-button" onclick="showModal()">
+
+		<div class="modal-window" id="modal">
+
+				<div class="modal-close-btn" onclick="closeModal()">X</div>
+
+		<!-- FORM -->
+
+				<form name="addPropertyForm" class="form-container">
+
+						Ваше имя:<br>
+						<input type="text" name="userName" placeholder="Enter name" autofocus required><br><br>
+						Ваш email:<br>
+						<input type="email" name="userEmail" placeholder="Enter email" required><br><br>
+						Контактный телефон:<br>
+						<input type="phone" name="userPhone" placeholder="Enter phone" required><br><br>
+						Добавьте фото:<br> 
+						<input type="file" name="propertyPhoto" accept="image/*"><br><br>
+						Вид заявки:<br>
+						  <select id="appTypeName" required>
+						    <option value="selling">Продается</option>
+						    <option value="rent">Сдается в аренду</option>
+						  </select><br><br>
+						Вид недвижимости:<br>
+						<select id="propertyTypeName" required>
+						    <option value="apartment">квартира</option>
+						    <option value="house">дом</option>
+						  </select><br><br>
+						Район:<br>
+						<select id="districtName" required>
+						    <option value="golos">Голосеевский</option>
+						  	<option value="darn">Дарницкий</option>
+						  	<option value="desn">Деснянский</option>
+						  	<option value="sviat">Святошинский</option>
+						  	<option value="pech">Печерский</option>
+						    <option value="shevch">Шевченковский</option>
+						    <option value="solom">Соломенский</option>
+						</select><br><br>
+						Улица:<br>
+						<select id="streetName" required>
+						    <option value="nez">Независимости</option>
+						  	<option value="hme">Б.Хмельницкого</option>
+						  	<option value="sem">А.Семиренко</option>
+						  	<option value="mos">В.Москаленко</option>
+						  	<option value="zav">Зависимости</option>
+						    <option value="bra">Братиславская</option>
+						    <option value="pot">Потапова</option>
+						</select><br><br>
+						Количество комнат:<br>
+						<input type="number" name="roomNumber" min="1" required><br><br>
+						Этаж:<br>
+						<input type="number" name="floorNumber" min="1" required><br><br>
+						Общая площадь:<br>
+						<input type="number" name="squareNumber" min="1" required><br><br>
+						Цена:<br>
+						<input type="number" name="priceNumber" required><br><br>
+						Краткое описание:<br>
+						<textarea name="description"></textarea><br><br>
+
+						<div class="buttons-container">
+							<input type="button" value="Добавить" class="modal-buttons" onclick="addProperty()">
+							<input type="button" value="Отмена" class="modal-buttons" onclick="closeQuickModal()">
+							 <input type="reset" value="Сбросить" class="modal-buttons">
+						</div>
+				
+				</form>
 			
+			</div>		
+		<div class="pagination">
+			<a href="#">&laquo;</a>
+			<a href="#">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#" onclick="f()">6</a>
+			<a href="#">&raquo;</a>
 		</div>
 	
 	</main>
