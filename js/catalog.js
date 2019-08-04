@@ -374,6 +374,6 @@ function addProperty() {
 
   document.querySelector(".container").appendChild(d);
 
-  closeQuickModal();
+  closeModal();
   filterSelection("div-container");
 }
