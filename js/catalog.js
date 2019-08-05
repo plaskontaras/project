@@ -24,6 +24,8 @@ for ( var i = 0; i < btns.length; i++) {
     });
 }
 
+function addAllObjects(i) {
+
     for ( i; i < arrayOfObjects.length; i++) {
         
         var d = document.createElement("div");
@@ -83,7 +85,6 @@ for ( var i = 0; i < btns.length; i++) {
         document.querySelector(".container").appendChild(d);
     
     }
-
 }
 
 function filterSelection(n) {
