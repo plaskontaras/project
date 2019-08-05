@@ -1,5 +1,10 @@
 html {
 	font-size: 2vw;
+	max-width: 1366px;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 .page {
@@ -162,6 +167,9 @@ html {
 		background-color: #a52a2a;
 		cursor: pointer;
 		width: 100%;
+	}
+	.header {
+		position: static;
 	}
 }
 

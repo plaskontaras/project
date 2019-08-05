@@ -1,209 +1,291 @@
 .search-and-filter-panel {
-  display: flex;
+    display: flex;
+    margin-bottom: 10px;
 }
 
 .filter-buttons-container {
-  display: flex;
-  flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
 }
+
 #search {
-  padding: 5px;
-  border: 1px solid  #008b92;
+    padding: 5px;
+    border: 1px solid  #008b92;
 }
 
 .div-container {
-  display: none;
-  width: 30%;
-  border: 2px solid #555;
-  margin-bottom: 5px;
-  padding: 5px;
+    display: none;
+    width: 30%;
+    border: 2px solid #555;
+    margin-bottom: 5px;
+    padding: 5px;
 }
 
 .show {
-  display: block;
+    display: block;
 }
 
 .filter-btn,
 .selectSorting {
-  margin: 10px;
-  height: 30px;
-  background-color: #008b92;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  outline: none;
+    margin: 10px;
+    height: 30px;
+    background-color: #008b92;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    outline: none;
 }
 
 #search-input {
-  margin: 10px;
-  height: 30px;
-  color: #000;
-  border: 1px solid #008b92;
-  padding-left: 4px;
-  width: 100%;
+    margin: 10px;
+    height: 30px;
+    color: #000;
+    border: 1px solid #008b92;
+    padding-left: 4px;
+    width: 100%;
 }
 
 .active {
-  background-color: #666;
-  color: white;
+    background-color: #666;
+    color: white;
 }
 
 .filter-btn:hover,
 .selectSorting:hover {
-  cursor: pointer;
-  background-color: #333;
-  color: #fff;
-}
-
-@media only screen and (max-width: 600px) {
-  .search-and-filter-panel {
-    flex-direction: column;
-  }
-  #search-input {
-    width: auto;
-  }
-  .filter-buttons-container {
-    justify-content: space-around;
-  } 
-}
-
-@media only screen and (max-width: 420px) {
-  #search-input {
-    width: auto;
-  }
-  .filter-buttons-container {
-    display: flex;
-    flex-direction: column;
-  } 
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
 }
 
 .container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .img-container {
-  width: 100%;
-  height: 150px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+    width: 100%;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .img-container1 {
-  background-image: url('../images/objects/1.jpg');
+    background-image: url('../images/objects/1.jpg');
 }
 
 .img-container2 {
-  background-image: url('../images/objects/2.jpg');
+    background-image: url('../images/objects/2.jpg');
 }
 
 .img-container3 {
-  background-image: url('../images/objects/3.jpg');
+    background-image: url('../images/objects/3.jpg');
 }
 
 .img-container4 {
-  background-image: url('../images/objects/4.jpg');
+    background-image: url('../images/objects/4.jpg');
 }
 
 .img-container5 {
-  background-image: url('../images/objects/5.jpg');
+    background-image: url('../images/objects/5.jpg');
 }
 
 .img-container6 {
-  background-image: url('../images/objects/6.jpg');
+    background-image: url('../images/objects/6.jpg');
 }
 
- .add-property-button {
-  display: block;
-  margin: auto;
-  padding: 10px 15px;
-  border: 4px solid #008b92;
-  border-radius: 10px;
-  color: #fff; 
-  font-weight: bold;
-  background-color: #333;
+.add-property-button {
+    margin: auto;  
+    padding: 10px 15px;
+    border: 4px solid #008b92;
+    border-radius: 10px;
+    color: #fff; 
+    font-weight: bold;
+    background-color: #333;
 } 
 
 .add-property-button:hover {
-  color: #008b92;
-  background-color: #fff;
-  cursor: pointer; 
+    color: #008b92;
+    background-color: #fff;
+    cursor: pointer; 
 }
 
 .modal-window {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
-  background-color: rgba(0,0,0,0.9);
-  padding-top: 60px;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: rgba(0,0,0,0.9);
+    padding-top: 40px;
 }
+
 .modal-close-btn {
-  position: absolute;
-  right: 25px;
-  top: 25px;
-  color: #fff;
-  font-size: 25px;
-  font-weight: bold;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .modal-close-btn:hover {
-  cursor: pointer;
-  color: rgba(255,0,0,0.5);
+    cursor: pointer;
+    color: rgba(255,0,0,0.5);
 }
 
 .modal-buttons:hover {
-  cursor: pointer;
-  color: #008b92;
-  background-color: #333; 
+    cursor: pointer;
+    color: #008b92;
+    background-color: #333; 
 }
 
 .form-container { 
-  color: #008b92;
-  font-size: 14px;
+    color: #008b92;
+    font-size: 14px;
 }
 
 .form-container {
-  background-color: #dcdcdc;
-  margin: 5% auto 5% auto;
-  border: 1px solid #888;
-  width: 50%;
-  padding: 10px;
+    background-color: #dcdcdc;
+    margin: 5% auto 5% auto;
+    border: 1px solid #888;
+    width: 70%;
+    padding: 10px;
 }
+
 .buttons-container {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
+
 .modal-buttons {
-  margin-top: 20px;
-  background-color: #008b92;
-  border: none;
-  border-radius: 7px;
-  padding: 4px 8px;
-  font-weight: bold;
+    margin-top: 20px;
+    background-color: #008b92;
+    border: none;
+    border-radius: 7px;
+    padding: 4px 8px;
+    font-weight: bold;
 }
+
 .form-container textarea {
-  width: 100%;
+    width: 100%;
 }
 
-/* Pagination */
+@media only screen and (max-width: 600px) {
+    .search-and-filter-panel {
+        flex-direction: column;
+    }
 
-.pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color .3s;
+    #search-input {
+        width: auto;
+    }
+
+    .filter-buttons-container {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .div-container {
+        width: 100%;
+        border: 2px solid #555;
+        margin-bottom: 5px;
+        padding: 2px;
+    }
+
+    .add-property-button {
+        padding: 5px 10px;
+        border: 4px solid #008b92;
+        border-radius: 10px;
+        font-weight: normal;
+    }
+
+    /*///////////////////////////*/
+    .modal-window {
+        padding-top: 20px;
+    }
+    .modal-close-btn {
+        top: 5px;
+        font-size: 15px;
+        font-weight: normal;
+    }
+    .form-container { 
+        font-size: 12px;
+    }
+
+    .form-container {
+        margin: 0 auto;
+        width: 90%;
+        padding: 5px;
+        overflow: hidden;
+    }
+    .addPhoto {
+        width: 70px;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .search-and-filter-panel {
+        flex-direction: column;
+    }
+
+    .div-container {
+        width: 45%;
+        border: 2px solid #555;
+        margin-bottom: 5px;
+        padding: 2px;
+    }
+
+    .filter-buttons-container {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .add-property-button {
+        padding: 5px 10px;
+        border: 4px solid #008b92;
+        border-radius: 10px;
+        font-weight: normal;
+    } 
 }
 
-.pagination a.active {
-  background-color: dodgerblue;
-  color: white;
+ @media only screen and (max-width: 420px) {
+    #search-input {
+        width: auto;
+    }
+
+    .filter-buttons-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter-btn,
+    .selectSorting {
+        margin: 5px auto; 
+        width: 150px;
+    }
+} 
+
+/*IE 10+ only*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+
+    #search-input {
+        width: 400px;
+    } 
+
 }
 
-.pagination a:hover:not(.active) {background-color: #ddd;}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 1024px)  { 
+
+    #search-input {
+        width: 96%;
+        margin: 5px auto;
+        box-sizing: border-box;
+    }
+    .add-property-button {
+        width: 180px; 
+    }
+
+}

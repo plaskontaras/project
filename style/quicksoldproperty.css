@@ -61,7 +61,7 @@
 	  background-color: #dcdcdc;
 	  margin: 5% auto 5% auto;
 	  border: 1px solid #888;
-	  width: 50%;
+	  width: 70%;
 	  padding: 10px;
 }
 
@@ -73,9 +73,11 @@
 	padding: 4px 8px;
 	font-weight: bold;
 }
+
 .quicksold__form-container textarea {
 	width: 100%;
 }
+
 @media only screen and (max-width: 600px) {
 
 	.quicksold__form-container input {

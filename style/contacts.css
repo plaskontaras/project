@@ -136,7 +136,7 @@ align-items: center;
 }
 
 /*Styles only for IE 10+*/
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
 
     .review__slider-container,
     .review_header,
@@ -144,6 +144,4 @@ align-items: center;
 		display: none;
 	}
 
-
-
-}
+} 
