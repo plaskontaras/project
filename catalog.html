@@ -4,13 +4,13 @@
 <head>
   
     <meta charset="utf-8">
-    <meta viewport="content" width="device-width scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style/general.css">
     <link rel="stylesheet" type="text/css" href="style/catalog.css">
     <script src="js/general.js" defer></script>
     <script src="js/catalog.js" defer></script>
-    <script type="text/javascript" src="json/objects.json"></script>
+    <script src="json/objects.json"></script>
     <title>Property Agency</title>
   
 </head>
@@ -23,7 +23,7 @@
     <div class="header__subheader">  
         <div class="header__logo"><img src="images/logo.png" alt="logo" class="header__logo-img"></div>
         <div class="header__company-name">
-            <h1><span class="header__company">Агентство недвижимости</span> "Виктория"<h1>
+            <h1><span class="header__company">Агентство недвижимости</span> "Виктория"</h1>
         </div>
         <p class="header__phones">
         Телефон: (044) 228-68-68 
@@ -79,7 +79,7 @@
 
         </div>
 
-        <input type="text" class="fa" placeholder="&#xf002 Search here.." id="search-input" onkeyup="searchFunction()">
+        <input type="text" class="fa" placeholder="&#xf002; Search here.." id="search-input" onkeyup="searchFunction()">
         <input type="button" value="Добавить недвижимость" class="add-property-button" onclick="showModal()">
     </div>
 
@@ -100,21 +100,21 @@
             Ваш email:<br>
             <input type="email" name="userEmail" placeholder="Enter email" required><br><br>
             Контактный телефон:<br>
-            <input type="phone" name="userPhone" placeholder="Enter phone" required><br><br>
+            <input type="tel" name="userPhone"><br><br>
             Добавьте фото:<br> 
             <input type="file" name="propertyPhoto" accept="image/*" class="addPhoto"><br><br>
             Вид заявки:<br>
-              <select id="appTypeName" required>
+              <select id="appTypeName">
                 <option value="selling">Продается</option>
                 <option value="rent">Сдается в аренду</option>
               </select><br><br>
             Вид недвижимости:<br>
-            <select id="propertyTypeName" required>
+            <select id="propertyTypeName">
                 <option value="apartment">квартира</option>
                 <option value="house">дом</option>
               </select><br><br>
             Район:<br>
-            <select id="districtName" required>
+            <select id="districtName">
                 <option value="golos">Голосеевский</option>
                 <option value="darn">Дарницкий</option>
                 <option value="desn">Деснянский</option>
@@ -124,7 +124,7 @@
                 <option value="solom">Соломенский</option>
             </select><br><br>
             Улица:<br>
-            <select id="streetName" required>
+            <select id="streetName">
                 <option value="nez">Независимости</option>
                 <option value="hme">Б.Хмельницкого</option>
                 <option value="sem">А.Семиренко</option>

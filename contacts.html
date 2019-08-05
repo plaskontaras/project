@@ -3,13 +3,13 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta viewport="content" width="device-width scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style/general.css">
 	<link rel="stylesheet" type="text/css" href="style/contacts.css">
 	<script src="js/general.js" defer></script>
 	<script src="js/contacts.js" defer></script>
-	<script type="text/javascript" src="json/reviews.json"></script>
+	<script src="json/reviews.json"></script>
 	<title>Property Agency</title>
 	
 </head>
@@ -20,9 +20,11 @@
 	<header class="header">
 
 		<div class="header__subheader">  
-			<div class="header__logo"><img src="images/logo.png" alt="logo" class="header__logo-img"></div>
+			<div class="header__logo">
+				<img src="images/logo.png" alt="logo" class="header__logo-img">
+			</div>
 			<div class="header__company-name">
-				<h1><span class="header__company">Агентство недвижимости</span> "Виктория"<h1>
+				<h1><span class="header__company">Агентство недвижимости</span> "Виктория"</h1>
 			</div>
 			<p class="header__phones">
 				Телефон: (044) 228-68-68 
@@ -59,7 +61,7 @@
 				Ваш email:<br>
 				<input type="email" name="userEmail" placeholder="Введите почту" required><br><br>
 				Контактный телефон:<br>
-				<input type="phone" name="userPhone" placeholder="Введите телефон" required><br><br>
+				<input type="tel" name="userPhone"><br><br>
 				Вид заявки:<br>
 				<input list="pre-order-type" name="pre-order-type" placeholder="Выберите из списка">
 				  <datalist id="pre-order-type">
